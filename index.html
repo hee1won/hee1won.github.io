@@ -43,16 +43,16 @@ footer{margin-top:72px;color:var(--muted);font-size:13px;border-top:1px solid va
 <div class="wrap">
 <header>
 <h1>노희원</h1>
-<p class="role">백엔드 개발자 · Spring Boot / Oracle / AI 운영 자동화</p>
-<p>메타넷글로벌에서 4년 가까이 풀무원 시스템 운영(SM)을 맡고 있습니다. 운영을 하면서 EDI, ITSM, AI 영양진단 같은 프로젝트의 백엔드와 REST API 연동을 주로 개발했습니다.</p>
-<p>최근에는 SM 업무를 자동화하는 사내 플랫폼을 Claude Code로 혼자 만들었고, 지금은 SM 담당자 20명 이상이 월 300건 넘는 요청을 이 플랫폼으로 처리하고 있습니다.</p>
+<p class="role">백엔드 개발자 · Java / Spring Boot / Oracle / AI 운영 자동화</p>
+<p>Java·Spring Boot로 4년째 기업 시스템을 운영하고 개발해 왔습니다. 풀무원 시스템 운영(SM)을 맡으면서 미국 법인 EDI, 사내 ITSM(Spring Boot·JPA), AI 영양진단 서비스의 백엔드와 RESTful API를 개발했고, Oracle SQL·PL/SQL로 데이터 처리 로직을 다뤄 왔습니다.</p>
+<p>최근에는 SM 업무 자동화 플랫폼을 혼자 개발했고, 지금은 SM 담당자 20명 이상이 월 300건 넘는 요청을 이 플랫폼으로 처리합니다. 단순 요청은 퇴근 후에도 사람 손 없이 자동으로 처리됩니다.</p>
 <nav><a href="#skills">기술</a><a href="#career">경력</a><a href="#projects">프로젝트</a><a href="#ai">AI 활용</a><a href="#etc">학력·자격</a></nav>
 </header>
 
 <section id="skills">
 <h2>기술</h2>
 <div class="chips">
-<span class="chip">Java</span><span class="chip">Spring Boot</span><span class="chip">Spring Framework</span><span class="chip">JPA</span><span class="chip">Oracle</span><span class="chip">SQL · PL/SQL</span><span class="chip">MySQL</span><span class="chip">REST API</span><span class="chip">TypeScript</span><span class="chip">Node.js / Express</span><span class="chip">PostgreSQL</span><span class="chip">React</span><span class="chip">JavaScript</span><span class="chip">jQuery</span><span class="chip">Oracle APEX</span><span class="chip">Unity</span><span class="chip">Linux</span><span class="chip">Git · SVN</span><span class="chip">Claude Code · Agent SDK</span>
+<span class="chip">Java</span><span class="chip">Spring Boot</span><span class="chip">Spring Framework</span><span class="chip">JPA (Hibernate)</span><span class="chip">Oracle</span><span class="chip">SQL · PL/SQL</span><span class="chip">MySQL</span><span class="chip">REST API</span><span class="chip">TypeScript</span><span class="chip">Node.js / Express</span><span class="chip">PostgreSQL</span><span class="chip">React</span><span class="chip">JavaScript</span><span class="chip">jQuery</span><span class="chip">Oracle APEX</span><span class="chip">Unity</span><span class="chip">Linux</span><span class="chip">Git · SVN</span><span class="chip">Claude Code · Agent SDK</span>
 </div>
 </section>
 
@@ -70,7 +70,7 @@ footer{margin-top:72px;color:var(--muted);font-size:13px;border-top:1px solid va
 <p>개인 PC에서 돌리던 ITSM 자동처리 스크립트를 팀 전체가 쓸 수 있는 웹 서비스로 옮겼습니다. 기획부터 개발, 배포까지 혼자 맡았고 지금은 SM 담당자 20명 이상이 월 300건 이상의 ITSM 요청을 이 플랫폼으로 처리하고 있습니다.</p>
 <div class="stats"><div><b>20명+</b><span>사용 중인 SM 담당자</span></div><div><b>월 300건+</b><span>플랫폼으로 처리하는 요청</span></div><div><b>0원</b><span>요청 분류 외부 API 비용</span></div></div>
 <ul>
-<li><b>L1/L2 요청은 분류부터 완료 처리까지 사람 손 없이 자동 처리</b>, 퇴근 후 들어오는 요청을 대신 봐주던 야간 인력이 필요 없어짐</li>
+<li><b>L1/L2 요청은 분류부터 완료 처리까지 사람 손 없이 자동 처리</b>, 예전에는 퇴근 후 들어온 요청을 담당자가 그때그때 직접 확인해야 했지만 지금은 야간 대응이 필요 없어짐</li>
 <li>ITSM 요청을 주기적으로 가져와 사내에 띄운 Qwen 모델로 L1(단순문의)/L2(데이터 조작)를 나누고, 할당부터 완료 처리까지 ITSM API로 자동 진행 (분류를 Qwen으로 옮기면서 분류 API 비용 0원)</li>
 <li>소스 수정이 필요한 L3 건은 읽기 전용 AI가 먼저 영향도를 보고, 사람이 승인해야 수정·커밋까지 가도록 승인 단계를 둠</li>
 <li>UPDATE/DELETE/DDL은 자동 감지해서 승인 큐로 보내고, 승인 후에도 개발 DB에서만 실행되게 제한</li>
@@ -92,8 +92,8 @@ footer{margin-top:72px;color:var(--muted);font-size:13px;border-top:1px solid va
 <div class="proj">
 <div class="top"><h3>메타넷 ITSM</h3><span class="when">2024.08 – 2024.10</span></div>
 <p>운영 요청을 좀 더 체계적으로 처리하려고 만든 사내 ITSM 시스템입니다.</p>
-<ul><li>React와 Spring Boot로 화면과 API 개발</li><li>Jira, GitLab으로 일정과 소스 관리</li></ul>
-<div class="chips"><span class="chip">Spring Boot</span><span class="chip">React</span><span class="chip">Jira</span><span class="chip">GitLab</span></div>
+<ul><li>Spring Boot·JPA로 RESTful API를 개발하고 React로 화면 구성</li><li>Jira, GitLab으로 일정과 소스 관리</li></ul>
+<div class="chips"><span class="chip">Spring Boot</span><span class="chip">JPA</span><span class="chip">React</span><span class="chip">Jira</span><span class="chip">GitLab</span></div>
 </div>
 
 <div class="proj">
